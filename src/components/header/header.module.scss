@@ -1,0 +1,11 @@
+@import '../../scss/vars';
+@import '../../scss/global.module';
+
+
+.header {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+

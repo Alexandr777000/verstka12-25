@@ -1,50 +1,51 @@
 import React from "react";
-import './header.scss'
-import logo from "./../../assets/images/logo.png";
+import s from "./header.module.scss";
+import globalStyles from "../../scss/_global.module.scss";
+// import "src/scss/_global.module.scss";
+import logoImg from "../../assets/images/logo.png";
+import {ReactComponent as Cart} from "../../assets/icon/cart.svg";
 
 export const Header = () => {
     return (
-        <header className="header">
-            <div className="container">
-                <div className="header__inner">
-                    <a className="logo" href="#">
-                        <img className="logo__img" src={logo}
-                             alt=""/>
+        <header className={s.header}>
+            <Cart/>
+            <div className={globalStyles.container} // className="container"
+            >
+                <div className={s.header__inner}>
+                    <a className={s.logo} href="#">
+                        <img className={s.logo__img} src={logoImg} alt="logo"/>
                     </a>
-                    <nav className="menu">
-                        <ul className="menu__list">
-                            <li className="menu__list-item">
-                                <a className="menu__list-link" href="#">HOME</a>
+                    <nav className={s.menu}>
+                        <ul className={s.menu__list}>
+                            <li className={s.menu__list_item}>
+                                <a className={s.menu__list_link} href="#">HOME</a>
                             </li>
-                            <li className="menu__list-item">
-                                <a className="menu__list-link" href="#">SHOP</a>
+                            <li className={s.menu__list_item}>
+                                <a className={s.menu__list_link} href="#">SHOP</a>
                             </li>
-                            <li className="menu__list-item">
-                                <a className="menu__list-link" href="#">PAGE</a>
+                            <li className={s.menu__list_item}>
+                                <a className={s.menu__list_link} href="#">PAGE</a>
                             </li>
-                            <li className="menu__list-item">
-                                <a className="menu__list-link" href="#">BLOG</a>
+                            <li className={s.menu__list_item}>
+                                <a className={s.menu__list_link} href="#">BLOG</a>
                             </li>
-                            <li className="menu__list-item">
-                                <a className="menu__list-link" href="#">CONTACT</a>
+                            <li className={s.menu__list_item}>
+                                <a className={s.menu__list_link} href="#">CONTACT</a>
                             </li>
                         </ul>
-                        <div className="user-nav">
-                            <a className="user-nav__link" href="#"></a>
-                            <a className="user-nav__link" href="#"></a>
-                            <a className="user-nav__link" href="#">
-                                <div className="user-nav__num"></div>
-                            </a>
-                            <a className="user-nav__link" href="#">
-                                <div className="user-nav__num"></div>
-                            </a>
-                        </div>
                     </nav>
+                    <div className={s.userNavigate}>
+                        <a className={s.userNavigate_link} href="#"></a>
+                        <a className={s.userNavigate_link} href="#">
+                            {/*бейджи подтягиваются с сервера поэтому цифры хардкодим тут*/}
+                            <div className="userNavigate_num">3</div>
+                            <div className="userNavigate_num">7</div>
+                        </a>
+                        <a className={s.userNavigate_link} href="#"></a>
+                    </div>
                 </div>
             </div>
-
         </header>
-
     );
 };
 

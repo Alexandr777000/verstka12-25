@@ -1,6 +1,8 @@
+@import 'vars';
+
 body {
   // характеристики основного цвета макета
-  color: #8d8d8d;
+  color: $default-color;
   font-size: 16px;
   line-height: 26px;
 }
