@@ -1,0 +1,51 @@
+@font-face {
+  font-family: 'Quicksand-Regular', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  src: local('Quicksand-Regular'),
+  url("../assets/fonts/Quicksand-Regular.woff2") format('woff2'),
+  url("../assets/fonts/Quicksand-Regular.woff") format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  // так как это шрифт без засечек ставим sans-serif
+  // если вдруг он не загрузится загрузился ближайший его родственник
+  font-family: 'Quicksand-Medium', sans-serif;
+  // так как медиум пишем 500
+  font-weight: 500;
+  // так как он не italic то
+  font-style: normal;
+  src: local('Quicksand-Medium'),
+  url("../assets/fonts/Quicksand-Medium.woff2") format('woff2'),
+  url("../assets/fonts/Quicksand-Medium.woff") format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto-Regular', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  src: local('Roboto-Regular'),
+  url("../assets/fonts/Roboto-Regular.woff2") format('woff2'),
+  url("../assets/fonts/Roboto-Regular.woff") format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto-Bold', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  src: local('Roboto-Bold'),
+  url("../assets/fonts/Roboto-Bold.woff2") format('woff2'),
+  url("../assets/fonts/Roboto-Bold.woff") format('woff');
+  font-display: swap;
+}
+/*
+Очередность важна woff2 выше чем 1 в url так как вофф2 лучше его сначала пробуем подключить..
+
+@font-face - директория которая погружает шрифты
+
+local - если шрифт находится в компе он его подтянет а не из инета...произодительность
+
+ */
