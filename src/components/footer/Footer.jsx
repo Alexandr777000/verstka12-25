@@ -16,7 +16,7 @@ const Footer = () => {
         <footer className={s.footer}>
             <div className={s.container}>
                 <div className={s.footerTop}>
-                    <div className={s.footerTop__item}>
+                    <div className={`${s.footerTop__item} ${s.footerTop__contact}`}>
                         <a className={s.logo} href="#">
                             <img className={s.logo__img} src={logoImg} alt="logo"/>
                         </a>
@@ -57,7 +57,7 @@ const Footer = () => {
                             </li>
                         </ul>
                     </div>
-                    <div className={s.footerTop__item}>
+                    <div className={`${s.footerTop__item} ${s.footerTop__nav}`}>
                         <h6 className={s.footerTop__title}>
                             Useful Links
                         </h6>
@@ -82,7 +82,7 @@ const Footer = () => {
                             </li>
                         </ul>
                     </div>
-                    <div className={s.footerTop__item}>
+                    <div className={`${s.footerTop__item} ${s.footerTop__nav}`}>
                         <h6 className={s.footerTop__title}>
                             My Account
                         </h6>
@@ -104,7 +104,7 @@ const Footer = () => {
                             </li>
                         </ul>
                     </div>
-                    <div className={s.footerTop__item}>
+                    <div className={`${s.footerTop__item} ${s.footerTop__item_form}`}>
                         <h6 className={s.footerTop__title}>Subscribe Our Newsletter</h6>
                     </div>
                     <p className={s.footerTop__text}>
@@ -139,3 +139,10 @@ const Footer = () => {
 };
 
 export default Footer;
+
+/*
+проверить длинные записи
+{`${s.footerTop__item} ${s.footerTop__nav}
+
+меньше названия класов сделать как в портфолио проекте...
+ */
