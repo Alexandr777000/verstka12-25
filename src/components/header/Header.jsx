@@ -3,11 +3,11 @@ import s from "./Header.module.scss";
 import globalStyles from "../../scss/_global.module.scss";
 // import "src/scss/_global.module.scss";
 import logoImg from "../../assets/images/logo.png";
-import userIcon from "../../assets/icon/user.png";
-import {ReactComponent as Cart} from "../../assets/icon/cart.svg";
-import {ReactComponent as UserIcon} from "../../assets/icon/user.svg";
-import {ReactComponent as SearchIcon} from "../../assets/icon/search.svg";
-import {ReactComponent as HeartIcon} from "../../assets/icon/heart.svg";
+import userIcon from "../../assets/icons/user.png";
+import {ReactComponent as Cart} from "../../assets/icons/cart.svg";
+import {ReactComponent as UserIcon} from "../../assets/icons/user.svg";
+import {ReactComponent as SearchIcon} from "../../assets/icons/search.svg";
+import {ReactComponent as HeartIcon} from "../../assets/icons/heart.svg";
 
 export const Header = () => {
     return (
@@ -42,7 +42,7 @@ export const Header = () => {
                         <div className={s.userNavigate}>
                             <a className={s.userNavigate__link} href="#">
                                 <UserIcon/>
-                                {/*<img className={s.userNavigate__link_img} src={userIcon} alt="user-btn-icon" />*/}
+                                {/*<img className={s.userNavigate__link_img} src={userIcon} alt="user-btn-icons" />*/}
                             </a>
                             <a className={s.userNavigate_link} href="#">
                                 <SearchIcon/>
