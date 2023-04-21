@@ -3,12 +3,17 @@ import s from "./header.module.scss";
 import globalStyles from "../../scss/_global.module.scss";
 // import "src/scss/_global.module.scss";
 import logoImg from "../../assets/images/logo.png";
+import userIcon from "../../assets/icon/user.png";
 import {ReactComponent as Cart} from "../../assets/icon/cart.svg";
+import {ReactComponent as UserIcon} from "../../assets/icon/user.svg";
+import {ReactComponent as SearchIcon} from "../../assets/icon/search.svg";
+import {ReactComponent as HeartIcon} from "../../assets/icon/heart.svg";
+import {ReactComponent as CartIcon} from "../../assets/icon/cart.svg";
 
 export const Header = () => {
     return (
         <header className={s.header}>
-            <Cart/>
+            {/*<Cart/>*/}
             <div className={globalStyles.container} // className="container"
             >
                 <div className={s.header__inner}>
@@ -18,7 +23,8 @@ export const Header = () => {
                     <nav className={s.menu}>
                         <ul className={s.menu__list}>
                             <li className={s.menu__list_item}>
-                                <a className={s.menu__list_link} href="#">HOME</a>
+                                <a className={`${s.menu__list_link} ${s.menu__list_link_active}`}
+                                   href="#">HOME</a>
                             </li>
                             <li className={s.menu__list_item}>
                                 <a className={s.menu__list_link} href="#">SHOP</a>
@@ -35,13 +41,21 @@ export const Header = () => {
                         </ul>
                     </nav>
                     <div className={s.userNavigate}>
-                        <a className={s.userNavigate_link} href="#"></a>
-                        <a className={s.userNavigate_link} href="#">
-                            {/*бейджи подтягиваются с сервера поэтому цифры хардкодим тут*/}
-                            <div className="userNavigate_num">3</div>
-                            <div className="userNavigate_num">7</div>
+                        <a className={s.userNavigate__link} href="#">
+                            <UserIcon/>
+                            {/*<img className={s.userNavigate__link_img} src={userIcon} alt="user-btn-icon" />*/}
                         </a>
-                        <a className={s.userNavigate_link} href="#"></a>
+                        <a className={s.userNavigate_link} href="#">
+                            <SearchIcon/>
+                        </a>
+                        <a className={s.userNavigate__link} href="#">
+                            <HeartIcon/>
+                            <span className={s.userNavigate__num}>3</span>
+                        </a>
+                        <a className={s.userNavigate__link} href="#">
+                            <Cart/>
+                            <span className={s.userNavigate__num}>7</span>
+                        </a>
                     </div>
                 </div>
             </div>

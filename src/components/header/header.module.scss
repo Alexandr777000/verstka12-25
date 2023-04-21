@@ -1,11 +1,79 @@
 @import '../../scss/vars';
-@import '../../scss/global.module';
+// @import 'scss/fonts.';
+// @import 'scss/reset.module';
+// @import 'scss/global.module';
 
 
 .header {
+  padding: 40px 0;
+
   &__inner {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu {
+    &__list {
+      display: flex;
+    }
+
+    &__list_item + .menu__list_item {
+      padding-left: 35px;
+    }
+
+    &__list_link {
+      color: $default;
+      padding-bottom: 2px;
+      // плавность для ссылки при наведении
+      transition: all .5s;
+      // активный класс при наведении на ссылку - подсветится красным...
+      &:hover {
+        color: $accent;
+        border-bottom: 1px solid $accent;
+      }
+    }
+
+    &__list_link_active {
+      // по умолчанию снизу линию на Home красную...
+
+      border-bottom: 1px solid $accent;
+    }
+
+  }
+
+  .userNavigate {
+    display: flex;
+
+    &__link {
+      display: flex;
+      justify-content: space-between;
+      // чтобы бейджи поставить на место
+      position: relative;
+    }
+
+    &__num {
+      // чтобы бейджи поставить на место
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      top: -9px;
+      right: -14px;
+      font-size: 12px;
+      color: #fff;
+      // ставим как высоту и цифры встанут по центру
+      line-height: 20px;
+      text-align: center;
+      background-color: $accent;
+    }
+
+    &__link + .userNavigate__link {
+      padding-left: 25px;
+    }
   }
 }
+
+
+@import '../../scss/media';
 
