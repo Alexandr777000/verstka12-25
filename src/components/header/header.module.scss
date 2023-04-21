@@ -33,7 +33,7 @@
         color: $accent;
         border-bottom: 1px solid $accent;
         // наследуемся...
-        @extend %quicksand-500
+        @extend %roboto-700
       }
     }
 
@@ -41,9 +41,8 @@
       // по умолчанию снизу линию на Home красную...
 
       border-bottom: 1px solid $accent;
-      @extend %quicksand-500
+      @extend %roboto-700
     }
-
   }
 
   .userNavigate {
