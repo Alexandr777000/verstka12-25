@@ -8,7 +8,7 @@ import {ReactComponent as Cart} from "../../assets/icon/cart.svg";
 export const Header = () => {
     return (
         <header className={s.header}>
-
+            <Cart/>
             <div className={globalStyles.container} // className="container"
             >
                 <div className={s.header__inner}>
